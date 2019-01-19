@@ -1,5 +1,8 @@
 # Run-Hadoop-In-Windows10
-
+Environment
+ - Windows 10
+ - Hadoop 2.9.2 (https://hadoop.apache.org/releases.html)
+ 
 # Configuration
 ## core-site.xml
 ```xml
@@ -163,3 +166,6 @@ In line 25, modify the jdk source
 ```javascript
 set JAVA_HOME=C:\PROGRA~1\Java\jdk1.8.0_191
 ```
+# Web Interface
+1. Namenode Information (http://localhost:50070 )
+2. Hadoop Cluster (http://localhost:8088/cluster)
