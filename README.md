@@ -158,3 +158,8 @@
 </property>
 </configuration>
 ```
+## hadoop-env.cmd
+In line 25, modify the jdk source
+```javascript
+set JAVA_HOME=C:\PROGRA~1\Java\jdk1.8.0_191
+```
