@@ -348,9 +348,26 @@ WordCount.java:17: error: cannot find symbol
  C:\hadoop-2.9.2\etc\hadoop;C:\hadoop-2.9.2\share\hadoop\common\lib\*;C:\hadoop-2.9.2\share\hadoop\common\*;C:\hadoop-2.9.2\share\hadoop\hdfs;C:\hadoop-2.9.2\share\hadoop\hdfs\lib\*;C:\hadoop-2.9.2\share\hadoop\hdfs\*;C:\hadoop-2.9.2\share\hadoop\yarn;C:\hadoop-2.9.2\share\hadoop\yarn\lib\*;C:\hadoop-2.9.2\share\hadoop\yarn\*;C:\hadoop-2.9.2\share\hadoop\mapreduce\lib\*;C:\hadoop-2.9.2\share\hadoop\mapreduce\*
 ```
 
-enter "javac WordCount.java -cp javac WordCount.java -cp {CLASSPATH}", where {CLASSPATH} is derived from "hadoop classpath" command,
+enter "javac WordCount.java -cp {CLASSPATH}", where {CLASSPATH} is derived from "hadoop classpath" command,
 once you finished the job, you will get the following files
  - WordCount$IntSumReducer.class
  - WordCount$TokenizerMapper.class
  - WordCount.class
  
+# Run your first MapReduce program
+You can download the WordCount.java (https://www.dropbox.com/s/yp9i7nwmgzr3nkx/WordCount.java?dl=0) and compile it. Make a jar file after compiling the java file.
+1. javac WordCount.java -cp {CLASSPATH}
+2. jar -cf WordCount.jar WordCount*
+3. hadoop jar WordCount.jar WordCount /input_dir /output_dir
+4. Print out the result "hdfs dfs -cat /output_dir2/*"
+	```
+	alex    2
+	nicki   3
+	nicky   1
+	q       2
+	queenb  1
+	test    2
+	william 1
+	willy   2
+	wily    1
+	```
