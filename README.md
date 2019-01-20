@@ -357,6 +357,7 @@ once you finished the job, you will get the following files
 # Run your first MapReduce program
 You can download the WordCount.java (https://www.dropbox.com/s/yp9i7nwmgzr3nkx/WordCount.java?dl=0) and compile it. Make a jar file after compiling the java file.
 1. javac WordCount.java -cp {CLASSPATH}
+  > {CLASSPATH} : Hadoop provides the utility to gt the class information by entering "hadoop classpath" 
 2. jar -cf WordCount.jar WordCount*
 3. hadoop jar WordCount.jar WordCount /input_dir /output_dir
 4. Print out the result "hdfs dfs -cat /output_dir2/*"
