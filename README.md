@@ -2,7 +2,8 @@
 Environment
  - Windows 10
  - Hadoop 2.9.2 (https://hadoop.apache.org/releases.html)
- - myJar.jar
+ - MapReduce Example (WordCount) (https://www.dropbox.com/s/yp9i7nwmgzr3nkx/WordCount.java?dl=0)
+ 
 # Configuration
 ## core-site.xml
 ```xml
