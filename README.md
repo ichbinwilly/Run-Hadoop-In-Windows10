@@ -167,6 +167,26 @@ In line 25, modify the jdk source
 ```
 set JAVA_HOME=C:\PROGRA~1\Java\jdk1.8.0_191
 ```
+
+# Run your first MapReduce program
+You can download the WordCount.java and compile it. Make a jar file after compiling the java file.
+1. javac WordCount.java -cp {CLASSPATH}
+  > {CLASSPATH} : Hadoop provides the utility to gt the class information by entering "hadoop classpath" 
+2. jar -cf WordCount.jar WordCount*
+3. hadoop jar WordCount.jar WordCount /input_dir /output_dir
+4. Print out the result "hdfs dfs -cat /output_dir/*"
+	```
+	alex    2
+	nicki   3
+	nicky   1
+	q       2
+	queenb  1
+	test    2
+	william 1
+	willy   2
+	wily    1
+	```
+
 # Web Interface
 1. Namenode Information (http://localhost:50070 )
 2. Hadoop Cluster (http://localhost:8088/cluster)
@@ -355,21 +375,3 @@ once you finished the job, you will get the following files
  - WordCount$TokenizerMapper.class
  - WordCount.class
  
-# Run your first MapReduce program
-You can download the WordCount.java (https://www.dropbox.com/s/yp9i7nwmgzr3nkx/WordCount.java?dl=0) and compile it. Make a jar file after compiling the java file.
-1. javac WordCount.java -cp {CLASSPATH}
-  > {CLASSPATH} : Hadoop provides the utility to gt the class information by entering "hadoop classpath" 
-2. jar -cf WordCount.jar WordCount*
-3. hadoop jar WordCount.jar WordCount /input_dir /output_dir
-4. Print out the result "hdfs dfs -cat /output_dir2/*"
-	```
-	alex    2
-	nicki   3
-	nicky   1
-	q       2
-	queenb  1
-	test    2
-	william 1
-	willy   2
-	wily    1
-	```
